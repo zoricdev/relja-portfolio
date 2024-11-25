@@ -125,6 +125,13 @@ body {
     font-weight: bold;
     text-decoration: none;
   }
+
+  @media (max-width: 768px) {
+    .nav-button {
+      padding: 10px 15px;
+    }
+  }
+
   
   .nav-button:hover {
     background-color: #02020C;
@@ -171,7 +178,7 @@ body {
   .nav-link-button {
     background: none;
     color: white;
-    padding: 10px 0;
+    padding: 10px 0px;
     text-align: left;
   }
 }
@@ -184,7 +191,10 @@ body {
 /* Hero Section */
 
 .hero-background {
-  background-image: url(assets/Hero-Background.svg);
+  background: linear-gradient(
+    rgba(255, 255, 255, 0.644), 
+    rgba(255, 255, 255, 0.603)
+  ), url(assets/Hero-Background.svg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
