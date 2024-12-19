@@ -13,7 +13,7 @@ function toggleMenu() {
 }
 
 const jobTitle = document.getElementById("job-title");
-const titles = ["Software Engineer", "Creative Designer"];
+const titles = ["Web Developer", "Graphic Designer"];
 let index = 0;
 
 // Function to update the text with fade-in effect

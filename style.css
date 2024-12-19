@@ -208,13 +208,15 @@ body {
 }
 
 .hero-section h1 {
-  animation: fadeInUp 2s ease-out;
+  opacity: 0; /* Start with hidden text */
+  transform: translateY(20px) scale(0.8); /* Start with the text slightly scaled down and translated down */
+  animation: zoomInUp 1s ease-out forwards; /* Apply the animation */
   padding-top: 50px;
   font-size: 3.0rem;
 }
 
 .hero-section p {
-  animation: fadeInUp 2s ease-out;
+  animation: fadeInUp 1s ease-out;
   font-size: 1.0rem;
   padding-bottom: 2em ;
 }
@@ -583,6 +585,18 @@ footer p {
   }
 }
 
+/* Keyframe animation for zoomInUp effect */
+@keyframes zoomInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px) scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
 .centered-paragraph {
     width: 60%;
     text-align: center;
@@ -645,4 +659,52 @@ footer p {
   color: #02020C;
   border: 0.5px solid #02020C;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Container for the logo slider */
+
+.center-logo-slider {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo-slider {
+  overflow: hidden;
+  width: 60%; /* Adjust to your container width */
+  background-color: #ffffff; /* Optional: background color */
+  padding: 20px 0; /* Optional: vertical padding */
+  position: relative;
+  mask-image: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 12.5%, rgb(0, 0, 0) 87.5%, rgba(0, 0, 0, 0) 100%); /* Add gradient mask to fade out logos on both sides */
+  -webkit-mask-image: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 12.5%, rgb(0, 0, 0) 87.5%, rgba(0, 0, 0, 0) 100%); /* For Safari support */
+}
+
+@media (max-width: 768px) {
+  .logo-slider {
+    width: 100%;
+  }
+
+  .logo-track img {
+    margin-right: 5px;
+  }
+}
+
+.logo-track {
+  display: inline-flex;
+  animation: scroll 90s linear infinite; /* Adjust speed of scroll */
+}
+
+.logo-track img {
+  width: 120px; /* Adjust logo size */
+  margin-right: 50px; /* Spacing between logos */
+  object-fit: contain; /* Ensure logos maintain aspect ratio */
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0); /* Start from the initial position */
+  }
+  100% {
+    transform: translateX(-50%); /* Move the entire set of logos to the left */
+  }
 }
