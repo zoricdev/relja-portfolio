@@ -784,3 +784,51 @@ footer p {
     padding: 12px 24px;
   }
 }
+
+/* Radar section */
+
+.radar-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  height: auto;
+  width: 100%;
+  background-color: #02020C;
+}
+
+.radar-section img {
+  display: block;
+  margin: 0 auto;
+  width: 60%;
+}
+
+.radar-section > div:nth-child(1) {
+  color: #ffffff;
+  margin-right: -180px;
+}
+
+.radar-section > div:nth-child(3) {
+  color: #ffffff;
+  margin-left: -180px;
+}
+
+/* Media Query for Mobile (max-width: 768px) */
+@media (max-width: 768px) {
+  .radar-section {
+    flex-direction: column;
+  }
+
+  .radar-section p {
+    display: none;
+  }
+
+  .radar-section img {
+    width: 90%;
+  }
+
+  .radar-section > div {
+    width: 100%;
+    text-align: center; 
+  }
+}
