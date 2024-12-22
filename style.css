@@ -619,7 +619,6 @@ footer p {
   width: 100%;
   height: auto;
   border-radius: 10px; /* Rounded corners */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
 
 @media (max-width: 768px) {
@@ -691,7 +690,7 @@ footer p {
 
 .logo-track {
   display: inline-flex;
-  animation: scroll 90s linear infinite; /* Adjust speed of scroll */
+  animation: scroll 70s linear infinite; /* Adjust speed of scroll */
 }
 
 .logo-track img {
@@ -706,5 +705,88 @@ footer p {
   }
   100% {
     transform: translateX(-50%); /* Move the entire set of logos to the left */
+  }
+}
+
+/* Recent story 13DOCTOR */
+
+.recent-story-13doctor {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  max-width: 1500px;
+  margin: 0 auto;
+  padding-bottom: 80px;
+  padding-top: 40px;
+}
+
+.text-content {
+  flex: 1;
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+.image-content {
+  flex: 1;
+  text-align: right;
+}
+
+.image-content img {
+  max-width: 100%;
+  height: auto;
+}
+
+.icon-text {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.icon-text img {
+  width: 15px;
+  height: auto;
+}
+
+.image-container {
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.responsive-image {
+  width: 100%;
+  max-width: 900px;
+  height: auto;
+}
+
+@media (max-width: 768px) {
+  .responsive-image {
+    width: 100%; 
+    max-width: 100%;
+  }
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .recent-story-13doctor {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 20px 20px;
+    }
+
+  .image-content img {
+    width: 20%;
+    max-width: 20px;
+  }
+
+  .text-content {
+    font-size: 0.5rem;
+  }
+
+  .button-content button {
+    padding: 12px 24px;
   }
 }
