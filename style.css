@@ -748,12 +748,6 @@ footer p {
   height: auto;
 }
 
-.image-container {
-  max-width: 100%;
-  display: flex;
-  justify-content: center;
-}
-
 .responsive-image {
   width: 100%;
   max-width: 900px;
